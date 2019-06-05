@@ -1,0 +1,24 @@
+body {
+  background-image: url("img/kitchen1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.container {
+  display: grid;
+  width: 100%;
+}
+.form-group {
+  width: 40%;
+}
+.rowSolids h3{
+  color: lavender;
+  text-shadow: 1px 1px black;
+}
+.result {
+  margin: 15px;
+  padding: 5px;
+  font-size: 30px;
+  display: none;
+  border: 2px solid black;
+}
