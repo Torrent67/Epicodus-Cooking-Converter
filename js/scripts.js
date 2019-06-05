@@ -2,6 +2,11 @@ $(document).ready(function(){
   var firstLiquid;
   var secondLiquid;
   var amount;
+
+  var firstSolid;
+  var secondSolid;
+  var amount2;
+
   $("#converter").submit(function(event) {
     firstLiquid = parseFloat($("#unit1").val());
     secondLiquid = parseFloat($("#unit2").val());
@@ -10,18 +15,17 @@ $(document).ready(function(){
     $(".result").text(test);
     $(".result").show();
     event.preventDefault();
-  })
+  });
     $("#converter2").submit(function(event) {
-    firstLiquid = parseFloat($("#unit3").val());
-    secondLiquid = parseFloat($("#unit4").val());
-    amount = parseFloat($("#amount2").val());
-    var test = parseFloat(conversion2(firstLiquid, secondLiquid));
-    $(".result").text(test);
-    $(".result").show();
+    firstSolid = parseFloat($("#unit3").val());
+    secondSolid = parseFloat($("#unit4").val());
+    amount2 = parseFloat($("#amount2").val());
+    var test2 = parseFloat(converter2(firstSolid, secondSolid));
+    $(".result2").text(test2);
+    $(".result2").show();
     event.preventDefault();
-  })
-
-var converter= function(firstLiquid, secondLiquid) {
+  });
+  var converter= function(firstLiquid, secondLiquid) {
   if (firstLiquid===1 && secondLiquid===2) {
     return amount/8;
   } else if (firstLiquid===1 && secondLiquid===3) {
@@ -49,6 +53,25 @@ var converter= function(firstLiquid, secondLiquid) {
     return amount*15.773;
   } else if (firstLiquid===4 && secondLiquid===3) {
     return amount*4;
+  } else {
+    return amount;
   }
 }
-});
+  var converter2 =function(firstSolid, secondSolid) {
+    if (firstSolid==1 && secondSolid==2) {
+      return amount2/16;
+    }  else if (firstSolid===1 && secondSolid===3) {
+    return amount2*28.35;
+    } else if (firstSolid===2 && secondSolid===1){
+    return amount*16;
+    }else if (firstSolid===2 && secondSolid===3){
+    return amount2*453.592;
+    } else if (firstSolid===3 && secondSolid===1){
+    return amount2/28.35;
+    }else if (firstSolid===3 && secondSolid===2){
+    return amount2/453.592;
+    }else{
+    return amount2;
+    }
+  }
+})
