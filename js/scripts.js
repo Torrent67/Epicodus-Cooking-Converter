@@ -63,7 +63,7 @@ $(document).ready(function(){
     }  else if (firstSolid===1 && secondSolid===3) {
     return amount2*28.35;
     } else if (firstSolid===2 && secondSolid===1){
-    return amount*16;
+    return amount2*16;
     }else if (firstSolid===2 && secondSolid===3){
     return amount2*453.592;
     } else if (firstSolid===3 && secondSolid===1){
