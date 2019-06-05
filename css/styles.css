@@ -5,7 +5,7 @@ body {
   text-align: center;
 }
 .container {
-  display: grid;
+  display: inline-grid;
   width: 100%;
 }
 .form-group {
@@ -21,4 +21,7 @@ body {
   font-size: 30px;
   display: none;
   border: 2px solid black;
+}
+#button {
+  float: right;
 }
